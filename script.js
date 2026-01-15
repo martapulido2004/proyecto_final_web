@@ -170,3 +170,16 @@ if (calendarGrid && calendarMonth) {
   renderCalendar();
 }
 
+const sliderTrack = document.getElementById("sliderTrack");
+const sliderPrev = document.getElementById("sliderPrev");
+const sliderNext = document.getElementById("sliderNext");
+
+if (sliderTrack && sliderPrev && sliderNext) {
+  const slideWidth = () => sliderTrack.querySelector(".slider-card")?.offsetWidth || 0;
+  sliderPrev.addEventListener("click", () => {
+    sliderTrack.scrollBy({ left: -slideWidth(), behavior: "smooth" });
+  });
+  sliderNext.addEventListener("click", () => {
+    sliderTrack.scrollBy({ left: slideWidth(), behavior: "smooth" });
+  });
+}

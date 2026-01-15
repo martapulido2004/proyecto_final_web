@@ -10,31 +10,34 @@
       href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Inter:wght@300;400;500&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+     <link rel="stylesheet" href="css/home.css" />
   </head>
 
-  <body>
+   <body class="page-home">
     <header class="site-header">
-      <div class="logo">aurora</div>
+      <a class="logo" href="index.html">
+        <img src="img/logoaurora2.png" alt="Aurora" />
+      </a>
       <nav class="site-nav">
-        <a href="#hotel">El hotel</a>
-        <a href="#retiro">Retiro artístico</a>
-        <a href="#programa">Programa</a>
-        <a href="#contacto" class="button">Reservas</a>
+       <a href="elhotel.html">El hotel</a>
+        <a href="retiroartistico.html">Retiro artístico</a>
+        <a href="programa.html">Programa</a>
+        <a href="reservas.html" class="button">Reservas</a>
       </nav>
     </header>
 
-     <main>
+    <main>
       <section class="hero">
         <div class="hero__content">
           <p class="eyebrow">Hotel & retiro creativo</p>
-          <h1>aurora</h1>
+          <img class="hero__logo" src="img/logoaurora1.png" alt="Aurora" />
           <p class="hero__lead">
             Un refugio para bajar el ritmo, escuchar el silencio y reconectar con el proceso creativo.
           </p>
           <div class="hero__actions">
-            <a class="button" href="#hotel">Conócenos</a>
-            <a class="link" href="#programa">Ver programa</a>
+            <a class="button" href="elhotel.html">Conócenos</a>
+            <a class="link" href="programa.html">Ver programa</a>
           </div>
         </div>
         <div class="hero__visual" aria-hidden="true">
@@ -44,7 +47,7 @@
         </div>
       </section>
 
-      <section class="intro">
+       <section class="intro home-intro">
         <p>
           La mayoría de webs hoteleras aceleran la decisión. Aurora propone lo contrario: una experiencia
           contemplativa donde la navegación es parte del mensaje.
@@ -55,77 +58,31 @@
         </div>
       </section>
 
-      <section id="hotel" class="section section--light">
+        <section class="section section--light">
         <div class="section__title">
-          <p class="eyebrow">El hotel</p>
-          <h2>Un espacio para habitar la calma</h2>
+          <p class="eyebrow">Explora el retiro</p>
+          <h2>Cuatro caminos para entrar en Aurora</h2>
         </div>
         <div class="grid">
           <article class="card">
-            <h3>Habitaciones & talleres</h3>
-            <p>
-              Estancias luminosas, estudio creativo y rincones de lectura para acompañar el proceso.
-            </p>
+            <h3>El hotel</h3>
+            <p>Habitaciones, biblioteca viva y arquitectura pensada para el descanso creativo.</p>
+            <a class="link" href="elhotel.html">Descubrir</a>
           </article>
           <article class="card">
-            <h3>Biblioteca viva</h3>
-            <p>
-              Colección curada de arte, fotografía y pensamiento contemporáneo para inspirar nuevas ideas.
-            </p>
+            <h3>Retiro artístico</h3>
+            <p>Un manifiesto para crear con calma, escuchar y dejar que el proceso guíe.</p>
+            <a class="link" href="retiroartistico.html">Ver retiro</a>
           </article>
           <article class="card">
-            <h3>Arquitectura y entorno</h3>
-            <p>
-              Volúmenes bajos, materiales naturales y vistas abiertas hacia un paisaje de amanecer perpetuo.
-            </p>
-          </article>
-        </div>
-      </section>
-
-      <section id="retiro" class="section">
-        <div class="section__title">
-          <p class="eyebrow">Retiro artístico</p>
-          <h2>El tiempo no corre, empieza</h2>
-        </div>
-        <div class="split">
-          <div>
-            <p>
-              Aurora es amanecer: inicio, luz suave y proceso. El retiro está diseñado para creativos que
-              buscan pausa, exploración sin presión y un ritmo narrativo progresivo.
-            </p>
-            <ul class="list">
-              <li>Animaciones y transiciones lentas.</li>
-              <li>Scroll suave y contemplativo.</li>
-              <li>Mucho espacio en blanco.</li>
-            </ul>
-          </div>
-          <div class="quote">
-            <p>“La navegación es parte del mensaje.”</p>
-            <span>— Manifiesto Aurora</span>
-          </div>
-        </div>
-      </section>
-
-      <section id="programa" class="section section--light">
-        <div class="section__title">
-          <p class="eyebrow">Programa / residencias</p>
-          <h2>Experiencias que acompañan el proceso creativo</h2>
-        </div>
-        <div class="grid grid--wide">
-          <article class="card">
-            <h3>Residencias de 7 días</h3>
-            <p>Convocatorias trimestrales para artistas, diseñadores y escritores.</p>
-            <span class="tag">Cupo limitado</span>
+            <h3>Programa</h3>
+            <p>Residencias, laboratorios y calendario vivo con convocatorias trimestrales.</p>
+            <a class="link" href="programa.html">Ver programa</a>
           </article>
           <article class="card">
-            <h3>Laboratorios lentos</h3>
-            <p>Sesiones guiadas de observación, escritura y prácticas de silencio activo.</p>
-            <span class="tag">Mañanas</span>
-          </article>
-          <article class="card">
-            <h3>Calendario vivo</h3>
-            <p>Disponibilidad, plazas y actividades compartidas semanalmente.</p>
-            <span class="tag">Actualizado</span>
+            <h3>Reservas</h3>
+            <p>Escríbenos para planear tu estancia o resolver cualquier duda del retiro.</p>
+            <a class="link" href="reservas.html">Contactar</a>
           </article>
         </div>
       </section>
@@ -145,13 +102,13 @@
               También recibimos a personas que no se definen como artistas, pero necesitan parar y reenfocar
               su energía creativa. Aurora es un acompañamiento personal.
             </p>
-            <a class="button" href="#contacto">Escríbenos</a>
+            <a class="button" href="reservas.html">Escríbenos</a>
           </div>
         </div>
       </section>
     </main>
 
-    <footer id="contacto" class="footer">
+    <footer class="footer">
       <div>
         <h2>Contacto & reservas</h2>
         <p>hola@aurora-retreat.com · +34 600 000 000</p>
@@ -161,7 +118,5 @@
         <span>2025/2026</span>
       </div>
     </footer>
-    
   </body>
 </html>
-  

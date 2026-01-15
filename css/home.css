@@ -1,0 +1,7 @@
+.page-home .hero {
+  background: linear-gradient(135deg, #6f6c32 0%, #5c6431 60%, #4f4c24 100%);
+}
+
+.home-intro {
+  max-width: 920px;
+}

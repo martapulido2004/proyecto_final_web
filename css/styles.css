@@ -108,6 +108,7 @@ a {
   overflow: hidden;
   background: var(--olive);
   color: var(--cream);
+  min-height: 100vh;
 }
 
 .hero h1 {
@@ -135,39 +136,6 @@ a {
   gap: 16px;
   margin-top: 32px;
   align-items: center;
-}
-
-.hero__visual {
-  position: relative;
-  min-height: 320px;
-}
-
-.orb {
-  position: absolute;
-  border-radius: 50%;
-  border: 3px solid rgba(244, 241, 230, 0.3);
-  background: rgba(244, 241, 230, 0.08);
-}
-
-.orb--large {
-  width: 420px;
-  height: 420px;
-  top: -60px;
-  right: 0;
-}
-
-.orb--medium {
-  width: 260px;
-  height: 260px;
-  top: 120px;
-  right: 140px;
-}
-
-.orb--small {
-  width: 140px;
-  height: 140px;
-  bottom: 0;
-  right: 40px;
 }
 
 .eyebrow {

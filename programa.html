@@ -12,7 +12,7 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
     />
-    <link rel="stylesheet" href="css/programa.css" />
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <header class="sticky-top shadow-sm">
@@ -44,22 +44,72 @@
 
     <main class="section page-header">
       <div class="container">
-        <div class="row g-4">
-          <div class="col-lg-6">
-            <p class="text-uppercase tracking">Programa / Residencias</p>
-            <h1 class="display-5 fw-semibold">Calendario consciente para crear.</h1>
-            <p class="lead">
-              Residencias de 7, 14 y 21 días con talleres diarios, mentorías y espacios de
-              estudio abiertos 24/7.
-            </p>
-          </div>
-          <div class="col-lg-6">
-            <img
-              class="hero-image"
-              src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1200&q=80"
-              alt="Paisaje natural para residencias creativas"
-            />
-          </div>
+        <div class="section-header">
+          <p class="text-uppercase tracking">Programa / Residencias</p>
+          <h1 class="display-5 fw-semibold">Calendario consciente para crear.</h1>
+          <p class="lead">
+            Residencias de 7, 14 y 21 días con talleres diarios, mentorías y espacios de
+            estudio abiertos 24/7.
+          </p>
+        </div>
+        <div class="programa-grid">
+          <article class="programa-card">
+            <div class="programa-orbit">
+              <span>Escritura</span>
+              <span>Grabado</span>
+              <span>Fotografía</span>
+              <span>Cerámica</span>
+              <span>Sonido</span>
+              <span>Huerto</span>
+            </div>
+            <div
+              class="programa-image"
+              style="background-image: url('https://images.unsplash.com/photo-1452626038306-9aae5e071dd3?auto=format&fit=crop&w=1200&q=80');"
+            ></div>
+            <div class="programa-content">
+              <h3>Laboratorio Aurora</h3>
+              <p>Sesiones guiadas de creación con mentorías 1:1.</p>
+              <button class="btn btn-outline-dark">Ver talleres</button>
+            </div>
+          </article>
+          <article class="programa-card">
+            <div class="programa-orbit">
+              <span>Ritual AM</span>
+              <span>Lectura</span>
+              <span>Mentoría</span>
+              <span>Edición</span>
+              <span>Texturas</span>
+              <span>Sketch</span>
+            </div>
+            <div
+              class="programa-image"
+              style="background-image: url('https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=1200&q=80');"
+            ></div>
+            <div class="programa-content">
+              <h3>Residencia Niebla</h3>
+              <p>Espacios privados y noches de estudio compartido.</p>
+              <button class="btn btn-outline-dark">Ver agenda</button>
+            </div>
+          </article>
+          <article class="programa-card">
+            <div class="programa-orbit">
+              <span>Caminatas</span>
+              <span>Respirar</span>
+              <span>Luz norte</span>
+              <span>Galería</span>
+              <span>Descanso</span>
+              <span>Comunidad</span>
+            </div>
+            <div
+              class="programa-image"
+              style="background-image: url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80');"
+            ></div>
+            <div class="programa-content">
+              <h3>Rituales del bosque</h3>
+              <p>Experiencias sensoriales para activar la intuición creativa.</p>
+              <button class="btn btn-outline-dark">Ver rituales</button>
+            </div>
+          </article>
         </div>
       </div>
     </main>
@@ -67,8 +117,8 @@
     <section class="section bg-soft">
       <div class="container">
         <div class="section-header">
-          <h2 class="section-title">Calendario interactivo</h2>
-          <p>Selecciona un día, revisa las actividades y apúntate a asistir.</p>
+          <h2 class="section-title">Calendario del mes</h2>
+          <p>Consulta las semanas disponibles y planifica tu estancia.</p>
         </div>
         <div class="calendar-card">
           <div class="calendar-header">
@@ -81,15 +131,6 @@
             </button>
           </div>
           <div class="calendar-grid" id="calendarGrid"></div>
-          <div class="calendar-signup">
-            <div>
-              <h4 id="selectedDateLabel">Selecciona una actividad</h4>
-              <p id="selectedEventLabel">Elige un botón dentro del calendario.</p>
-            </div>
-            <button class="btn btn-primary" type="button" id="confirmAttendance">
-              Apuntarme a la actividad
-            </button>
-          </div>
         </div>
         <div class="row g-4">
           <div class="col-md-6">

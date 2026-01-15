@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aurora · El Hotel</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@400;500;600&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="css/hotel.css" />
+  </head>
+  <body>
+    <header class="sticky-top shadow-sm">
+      <nav class="navbar navbar-expand-lg bg-light px-3">
+        <a class="navbar-brand fw-semibold" href="index.html">Aurora</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#auroraNav"
+          aria-controls="auroraNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="auroraNav">
+          <ul class="navbar-nav ms-auto gap-lg-3">
+            <li class="nav-item"><a class="nav-link active" href="hotel.html">El Hotel</a></li>
+            <li class="nav-item"><a class="nav-link" href="espacios.html">Espacios</a></li>
+            <li class="nav-item"><a class="nav-link" href="retiro.html">Retiro Artístico</a></li>
+            <li class="nav-item"><a class="nav-link" href="programa.html">Programa</a></li>
+            <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+            <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main class="section page-header">
+      <div class="container">
+        <div class="spaces-header">
+          <div>
+            <p class="text-uppercase tracking">El Hotel</p>
+            <h1 class="display-5 fw-semibold">Un refugio boutique diseñado para crear.</h1>
+            <p class="lead">
+              Aurora ofrece 24 habitaciones, biblioteca silenciosa y talleres abiertos para
+              artistas, diseñadores y escritores que buscan profundidad.
+            </p>
+          </div>
+          <a class="btn btn-outline-dark" href="contacto.html">Reservar estancia</a>
+        </div>
+
+        <div class="spaces-grid">
+          <article class="space-card">
+            <div
+              class="space-image"
+              style="background-image: url('https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=1200&q=80');"
+            ></div>
+            <div class="space-meta">
+              <span>Suite Aurora</span>
+              <span>Vistas al bosque</span>
+            </div>
+          </article>
+          <article class="space-card">
+            <div
+              class="space-image"
+              style="background-image: url('https://images.unsplash.com/photo-1507089947368-19c1da9775ae?auto=format&fit=crop&w=1200&q=80');"
+            ></div>
+            <div class="space-meta">
+              <span>Residencia Niebla</span>
+              <span>Luz norte</span>
+            </div>
+          </article>
+          <article class="space-card">
+            <div
+              class="space-image"
+              style="background-image: url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=1200&q=80');"
+            ></div>
+            <div class="space-meta">
+              <span>Suite Terra</span>
+              <span>Textiles naturales</span>
+            </div>
+          </article>
+          <article class="space-card">
+            <div
+              class="space-image"
+              style="background-image: url('https://images.unsplash.com/photo-1477587458883-47145ed94245?auto=format&fit=crop&w=1200&q=80');"
+            ></div>
+            <div class="space-meta">
+              <span>Casa Horizonte</span>
+              <span>Estudio + terraza</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </main>
+
+    <section class="section bg-soft">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-md-6">
+            <div class="info-card">
+              <h3>Habitaciones</h3>
+              <p>
+                Textiles naturales, baños de piedra y terrazas privadas para escribir y
+                observar el bosque.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="info-card">
+              <h3>Biblioteca</h3>
+              <p>
+                Fondo curado de arte, diseño y literatura contemporánea, con rincones para
+                lectura silenciosa.
+              </p>
+            </div>
+          </div>
+          <div class="col-12">
+            <div class="section-hero mt-3">
+              <h3>Servicios principales</h3>
+              <ul class="list-unstyled spacing-list">
+                <li>Suites con escritorio y luz natural.</li>
+                <li>Estudio de grabado, cerámica y fotografía.</li>
+                <li>Comedor slow con productos locales.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container d-flex flex-column flex-md-row justify-content-between gap-3">
+        <div>
+          <h4>Aurora</h4>
+          <p class="mb-0">Hotel de retiro artístico · Desde 2025</p>
+        </div>
+        <div>
+          <a class="footer-link" href="index.html">Inicio</a>
+          <a class="footer-link" href="programa.html">Programa</a>
+          <a class="footer-link" href="blog.html">Blog</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

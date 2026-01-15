@@ -114,6 +114,7 @@ main {
   color: #6b726c;
 }
 
+
 .color-palette {
   display: flex;
   flex-wrap: wrap;
@@ -632,6 +633,99 @@ main {
   margin-bottom: 40px;
 }
 
+.programa-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 28px;
+  margin-top: 32px;
+}
+
+.programa-card {
+  position: relative;
+  background: var(--aurora-card);
+  border-radius: 30px;
+  padding: 24px;
+  box-shadow: 0 18px 36px rgba(0, 0, 0, 0.12);
+  display: grid;
+  gap: 20px;
+  justify-items: center;
+  text-align: center;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.programa-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 22px 42px rgba(0, 0, 0, 0.16);
+}
+
+.programa-orbit {
+  position: absolute;
+  inset: 16px;
+  border-radius: 999px;
+  border: 1px dashed rgba(60, 74, 63, 0.2);
+  animation: spin 22s linear infinite;
+  pointer-events: none;
+}
+
+.programa-orbit span {
+  position: absolute;
+  font-size: 0.65rem;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  color: #7d7d72;
+  background: var(--aurora-card);
+  padding: 2px 6px;
+  border-radius: 999px;
+}
+
+.programa-orbit span:nth-child(1) {
+  top: -10px;
+  left: 40%;
+}
+
+.programa-orbit span:nth-child(2) {
+  top: 15%;
+  right: -12px;
+}
+
+.programa-orbit span:nth-child(3) {
+  top: 50%;
+  right: -18px;
+}
+
+.programa-orbit span:nth-child(4) {
+  bottom: 15%;
+  right: -6px;
+}
+
+.programa-orbit span:nth-child(5) {
+  bottom: -10px;
+  left: 45%;
+}
+
+.programa-orbit span:nth-child(6) {
+  top: 45%;
+  left: -18px;
+}
+
+.programa-image {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 18px 30px rgba(0, 0, 0, 0.18);
+}
+
+.programa-content h3 {
+  margin-bottom: 8px;
+}
+
+.programa-content p {
+  margin-bottom: 16px;
+}
+
 .calendar-header {
   display: flex;
   justify-content: space-between;
@@ -656,11 +750,12 @@ main {
   border: none;
   background: #f6f1e7;
   border-radius: 14px;
-  padding: 8px;
-  min-height: 110px;
+  padding: 12px 8px;
+  min-height: 70px;
   display: grid;
-  gap: 6px;
+  place-items: center;
   color: var(--aurora-primary);
+  font-weight: 600;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
@@ -670,14 +765,12 @@ main {
   text-transform: uppercase;
   font-size: 0.7rem;
   min-height: auto;
-  align-items: center;
-  justify-items: center;
   padding: 8px 0;
 }
 
 .calendar-day.empty {
   background: transparent;
-  min-height: 110px;
+  min-height: 70px;
 }
 
 .calendar-day:hover {
@@ -685,54 +778,8 @@ main {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
 }
 
-.calendar-day.selected {
-  background: var(--aurora-accent);
-  color: #2f2416;
-}
-
-.calendar-day-number {
-  font-weight: 600;
-  font-size: 0.9rem;
-}
-
-.calendar-event-button {
-  border: none;
-  background: rgba(155, 143, 90, 0.12);
-  color: var(--aurora-primary);
-  border-radius: 999px;
-  padding: 6px 10px;
-  font-size: 0.7rem;
-  text-align: left;
-  cursor: pointer;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.calendar-event-button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 14px rgba(0, 0, 0, 0.12);
-}
-
-.calendar-event-button.selected {
-  background: var(--aurora-accent);
-  color: #2f2416;
-}
-
 .calendar-day.today {
   border: 1px solid var(--aurora-accent);
-}
-
-.calendar-signup {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 24px;
-}
-
-.calendar-form {
-  background: #fbfaf7;
-  border-radius: 16px;
-  padding: 18px;
-  border: 1px solid rgba(60, 74, 63, 0.1);
 }
 
 .footer {
@@ -813,6 +860,15 @@ main {
   }
 }
 
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   * {
     animation-duration: 0.01ms !important;
@@ -866,10 +922,10 @@ main {
     grid-auto-columns: minmax(220px, 1fr);
   }
 
-  .calendar-signup {
-    flex-direction: column;
-    align-items: flex-start;
+  .programa-orbit {
+    inset: 8px;
   }
+
 }
 
 @media (max-width: 576px) {

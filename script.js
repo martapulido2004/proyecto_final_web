@@ -105,47 +105,9 @@ const calendarGrid = document.getElementById("calendarGrid");
 const calendarMonth = document.getElementById("calendarMonth");
 const prevMonthButton = document.getElementById("prevMonth");
 const nextMonthButton = document.getElementById("nextMonth");
-const selectedDateLabel = document.getElementById("selectedDateLabel");
-const selectedEventLabel = document.getElementById("selectedEventLabel");
-const confirmAttendanceButton = document.getElementById("confirmAttendance");
 
 if (calendarGrid && calendarMonth) {
   let currentDate = new Date();
-  let selectedDate = null;
-  let selectedEventId = null;
-  let selectedEventTitle = "";
-  let selectedEventDate = null;
-
-  const formatDateKey = (date) =>
-    `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, "0")}-${String(
-      date.getDate(),
-    ).padStart(2, "0")}`;
-
-  const sampleEvents = {
-    "2026-01-15": [
-      { id: "ceramica", title: "Taller de cerámica", time: "10:00", spots: 6 },
-      { id: "escritura", title: "Escritura al amanecer", time: "07:30", spots: 4 },
-    ],
-    "2026-01-18": [
-      { id: "fotografia", title: "Fotografía analógica", time: "16:00", spots: 5 },
-    ],
-    "2026-01-22": [
-      { id: "sonido", title: "Laboratorio de sonido", time: "18:30", spots: 3 },
-      { id: "lectura", title: "Círculo de lectura", time: "20:00", spots: 8 },
-    ],
-  };
-
-  const updateSelectedEvent = (event, date) => {
-    selectedEventId = event.id;
-    selectedEventTitle = `${event.title} · ${event.time}`;
-    selectedEventDate = date;
-    selectedDateLabel.textContent = date.toLocaleDateString("es-ES", {
-      weekday: "long",
-      day: "numeric",
-      month: "long",
-    });
-    selectedEventLabel.textContent = selectedEventTitle;
-  };
 
   const renderCalendar = () => {
     const year = currentDate.getFullYear();
@@ -182,15 +144,6 @@ if (calendarGrid && calendarMonth) {
       dayNumber.textContent = day;
       dayCell.appendChild(dayNumber);
 
-      if (
-        selectedDate &&
-        date.getFullYear() === selectedDate.getFullYear() &&
-        date.getMonth() === selectedDate.getMonth() &&
-        date.getDate() === selectedDate.getDate()
-      ) {
-        dayCell.classList.add("selected");
-      }
-
       const today = new Date();
       if (
         date.getFullYear() === today.getFullYear() &&
@@ -198,31 +151,6 @@ if (calendarGrid && calendarMonth) {
         date.getDate() === today.getDate()
       ) {
         dayCell.classList.add("today");
-      }
-
-      const key = formatDateKey(date);
-      const items = sampleEvents[key] || [];
-      if (items.length > 0) {
-        items.forEach((item) => {
-          const eventButton = document.createElement("button");
-          eventButton.type = "button";
-          eventButton.className = "calendar-event-button";
-          eventButton.dataset.id = item.id;
-          eventButton.dataset.date = key;
-          eventButton.textContent = `${item.title} · ${item.time}`;
-          eventButton.addEventListener("click", () => {
-            selectedDate = date;
-            updateSelectedEvent(item, date);
-            renderCalendar();
-            const matchingButton = document.querySelector(
-              `.calendar-event-button[data-id="${item.id}"][data-date="${key}"]`,
-            );
-            if (matchingButton) {
-              matchingButton.classList.add("selected");
-            }
-          });
-          dayCell.appendChild(eventButton);
-        });
       }
 
       calendarGrid.appendChild(dayCell);
@@ -239,23 +167,6 @@ if (calendarGrid && calendarMonth) {
     renderCalendar();
   });
 
-  if (confirmAttendanceButton) {
-    confirmAttendanceButton.addEventListener("click", () => {
-      if (!selectedEventId || !selectedEventDate) {
-        confirmAttendanceButton.textContent = "Selecciona una actividad";
-        setTimeout(() => {
-          confirmAttendanceButton.textContent = "Apuntarme a la actividad";
-        }, 1500);
-        return;
-      }
-      confirmAttendanceButton.textContent = "¡Reserva confirmada!";
-      setTimeout(() => {
-        confirmAttendanceButton.textContent = "Apuntarme a la actividad";
-      }, 2000);
-    });
-  }
-
-  selectedDateLabel.textContent = "Selecciona una actividad";
-  selectedEventLabel.textContent = "Elige un botón dentro del calendario.";
   renderCalendar();
 }
+

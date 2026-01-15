@@ -121,7 +121,7 @@ a {
 
 .hero__logo {
   display: block;
-  width: min(360px, 70vw);
+  width: min(500px, 70vw);
   height: auto;
   margin-bottom: 16px;
 }

@@ -953,26 +953,6 @@ button:focus-visible {
 
 
 
-.calendar-grid {
-  display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  gap: 8px;
-  margin-bottom: 24px;
-}
-
-.calendar-day {
-  border: none;
-  background: #f6f1e7;
-  border-radius: 14px;
-  padding: 12px 8px;
-  min-height: 70px;
-  display: grid;
-  place-items: center;
-  color: var(--aurora-primary);
-  font-weight: 600;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
 .calendar-day.header {
   background: transparent;
   color: #7d7d72;

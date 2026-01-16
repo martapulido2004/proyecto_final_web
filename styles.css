@@ -81,7 +81,7 @@ main {
       rgba(17, 16, 0, 0.55) 100%
     ),
     url("../img/exteriorhotel.jpg") center / cover no-repeat;
-    min-height: 90vh;
+    min-height: 95vh;
 }
 
 .hero-section .btn-primary {

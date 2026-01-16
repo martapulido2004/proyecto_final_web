@@ -9,6 +9,7 @@
   --aurora-cream: #fbf8f2;
   --aurora-card: #ffffff;
   --aurora-olive: #6f6c32;
+  --aurora-click: #cfe8c2;
 }
 
 body {
@@ -98,6 +99,18 @@ main {
   text-transform: uppercase;
   letter-spacing: 0.15rem;
   font-size: 0.75rem;
+}
+
+.btn:active,
+.btn:focus,
+.btn:focus-visible,
+button:active,
+button:focus,
+button:focus-visible {
+  background-color: var(--aurora-click) !important;
+  border-color: var(--aurora-click) !important;
+  color: var(--aurora-dark);
+  box-shadow: none;
 }
 
 .tracking {
@@ -964,6 +977,10 @@ main {
 
 .calendar-day.today {
   border: 1px solid var(--aurora-accent);
+}
+
+.footer-link {
+  color: var(--aurora-cream);
 }
 
 .footer {

@@ -34,6 +34,12 @@ main {
   color: var(--aurora-primary);
 }
 
+.logo img {
+  display: block;
+  height: 36px;
+  width: auto;
+}
+
 .navbar-nav .nav-link {
   position: relative;
   font-weight: 600;

@@ -8,6 +8,7 @@
   --aurora-ink: #2f332d;
   --aurora-cream: #fbf8f2;
   --aurora-card: #ffffff;
+  --aurora-olive: #6f6c32;
 }
 
 body {
@@ -71,16 +72,21 @@ main {
 }
 
 .hero-section {
-  background: linear-gradient(120deg, rgba(29, 36, 31, 0.92), rgba(60, 74, 63, 0.75)),
-    url("https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=1600&q=80")
-      center / cover no-repeat;
-  color: #fdfaf5;
+  background:
+    linear-gradient(
+      135deg,
+      rgba(79, 76, 36, 0.7) 0%,
+      rgba(92, 100, 49, 0.6) 60%,
+      rgba(111, 108, 50, 0.55) 100%
+    ),
+    url("../img/exteriorhotel.jpg") center / cover no-repeat;
+    min-height: 100vh;
 }
 
 .hero-section .btn-primary {
   background-color: var(--aurora-accent);
   border: none;
-  color: #2f2416;
+  color: var(--aurora-cream);
   text-transform: uppercase;
   letter-spacing: 0.15rem;
   font-size: 0.75rem;
@@ -99,6 +105,23 @@ main {
   font-size: 0.7rem;
   font-weight: 600;
 }
+
+.hero-section .tracking {
+  color: var(--aurora-cream);
+}
+
+.hero-section .lead {
+  color: var(--aurora-cream);
+}
+
+.hero-logo {
+  display: block;
+  max-width: 600px;
+  width: 100%;
+  height: auto;
+  margin: 12px 0 20px;
+}
+
 
 .canvas-card {
   background: var(--aurora-card);
@@ -944,60 +967,30 @@ main {
 }
 
 .footer {
-  background: #101816;
-  color: #fdfaf5;
-  padding: 32px 0;
+  padding: 60px 8vw;
+  background: var(--aurora-olive);
+  color: var(--aurora-cream);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 24px;
 }
 
-.footer-link {
-  color: #fdfaf5;
-  margin-right: 16px;
-  text-decoration: none;
+.footer h2 {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 500;
+  font-size: 32px;
+  margin-bottom: 12px;
 }
 
-.footer-link:hover {
-  text-decoration: underline;
-}
-
-.btn,
-.btn-outline-dark,
-.btn-outline-light,
-.btn-primary {
-  font-family: "Inter", "Segoe UI", system-ui, sans-serif;
+.footer__meta {
+  display: flex;
+  gap: 24px;
   text-transform: uppercase;
-  letter-spacing: 0.18rem;
-  font-size: 0.7rem;
-  padding: 0.7rem 1.4rem;
-  border-radius: 999px;
+  letter-spacing: 1px;
+  font-size: 12px;
 }
-
-.btn-outline-dark {
-  border-color: var(--aurora-primary);
-  color: var(--aurora-primary);
-}
-
-.btn-outline-dark:hover {
-  background-color: var(--aurora-primary);
-  color: #fdfaf5;
-}
-
-.btn-primary {
-  background-color: var(--aurora-accent);
-  border: none;
-  color: #2f2416;
-}
-
-.btn-primary:hover {
-  filter: brightness(0.95);
-}
-
-.badge {
-  font-family: "Inter", "Segoe UI", system-ui, sans-serif;
-  text-transform: uppercase;
-  letter-spacing: 0.12rem;
-  font-size: 0.6rem;
-}
-
 @keyframes fadeIn {
   from {
     opacity: 0;

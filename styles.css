@@ -951,12 +951,6 @@ button:focus-visible {
   margin-bottom: 16px;
 }
 
-
-
-.calendar-day.today {
-  border: 1px solid var(--aurora-accent);
-}
-
 .footer-link {
   color: var(--aurora-cream);
 }

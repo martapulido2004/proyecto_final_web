@@ -81,7 +81,7 @@ main {
       rgba(17, 16, 0, 0.55) 100%
     ),
     url("../img/exteriorhotel.jpg") center / cover no-repeat;
-    min-height: 95vh;
+    min-height: 90vh;
 }
 
 .hero-section .btn-primary {
@@ -858,14 +858,6 @@ button:focus-visible {
   animation: drift 8s ease-in-out infinite;
 }
 
-.calendar-card {
-  background: var(--aurora-card);
-  border-radius: 28px;
-  padding: 28px;
-  box-shadow: 0 20px 36px rgba(0, 0, 0, 0.12);
-  margin-bottom: 40px;
-}
-
 .programa-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -959,13 +951,7 @@ button:focus-visible {
   margin-bottom: 16px;
 }
 
-.calendar-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 16px;
-  margin-bottom: 20px;
-}
+
 
 .calendar-header h3 {
   margin: 0;

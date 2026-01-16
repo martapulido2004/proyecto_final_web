@@ -953,11 +953,6 @@ button:focus-visible {
 
 
 
-.calendar-header h3 {
-  margin: 0;
-  text-transform: capitalize;
-}
-
 .calendar-grid {
   display: grid;
   grid-template-columns: repeat(7, 1fr);

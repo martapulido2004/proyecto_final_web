@@ -953,11 +953,6 @@ button:focus-visible {
 
 
 
-.calendar-day.empty {
-  background: transparent;
-  min-height: 70px;
-}
-
 .calendar-day:hover {
   transform: translateY(-2px);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);

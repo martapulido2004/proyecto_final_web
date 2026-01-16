@@ -113,6 +113,42 @@ button:focus-visible {
   box-shadow: none;
 }
 
+
+
+.btn,
+.btn-outline-dark,
+.btn-outline-light,
+.btn-primary {
+  font-family: "Inter", "Segoe UI", system-ui, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.18rem;
+  font-size: 0.7rem;
+  padding: 0.7rem 1.4rem;
+  border-radius: 999px;
+}
+
+.btn-outline-dark {
+  border-color: var(--aurora-primary);
+  color: var(--aurora-primary);
+}
+
+.btn-outline-dark:hover {
+  background-color: var(--aurora-primary);
+  color: #fdfaf5;
+}
+
+.btn-primary {
+  background-color: var(--aurora-accent);
+  border: none;
+  color: #2f2416;
+}
+
+.btn-primary:hover {
+  filter: brightness(0.95);
+  background-color: #000;
+}
+
+
 .tracking {
   letter-spacing: 0.35rem;
   font-size: 0.7rem;
